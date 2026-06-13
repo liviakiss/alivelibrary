@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to set up a design system from scratch — ALIVE Library</title>
+<meta name="description" content="Setting up a design system from scratch is the disciplined process of defining foundational styles, building reusable components, and creating clear documentation in the right sequence so the system grows sustainably instead of becoming a maintenance burden.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/how-to-set-up-a-design-system-from-scratch.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to set up a design system from scratch — ALIVE Library">
+<meta property="og:description" content="Setting up a design system from scratch is the disciplined process of defining foundational styles, building reusable components, and creating clear documentation in the right sequence so the system grows sustainably instead of becoming a maintenance burden.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-e5762b2d-2eba-409d-8fcb-9f0fbabc0837_bt4wgq.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/how-to-set-up-a-design-system-from-scratch.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html" class="active">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">TOOLS &AMP; WORKFLOW</span>
+  <h1 class="entry-title">How to set up a design system from scratch</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Setting up a design system from scratch is the disciplined process of defining foundational styles, building reusable components, and creating clear documentation in the right sequence so the system grows sustainably instead of becoming a maintenance burden.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn layered pyramid: bottom layer “Foundations (tokens)”, middle “Components”, top “Patterns & Templates”, with documentation and governance as the supporting structure around it. Show an unstable tower (wrong order) versus a stable, growing system (right order). Margin sketch of a designer happily adding new screens using the system versus fighting inconsistencies.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>A design system is not just a UI kit. It is a living set of shared standards for design and code that ensures consistency, speeds up work, and improves quality as a product scales. The order you build it matters enormously.</p>
+<p>The practical sequence I have refined through multiple projects is:</p>
+<ol>
+<li><strong>Foundation</strong> — Design tokens (colors, typography, spacing, shadows, motion) first. These are the atoms everything else is built from.</li>
+<li><strong>Core Components</strong> — Build the most used elements (buttons, inputs, cards, navigation) with variants and states.</li>
+<li><strong>Patterns &amp; Templates</strong> — Compose components into common layouts and flows.</li>
+<li><strong>Documentation &amp; Guidelines</strong> — Rules for usage, dos and don’ts, and contribution process.</li>
+<li><strong>Governance &amp; Adoption</strong> — Processes for updates, versioning, and getting the team to actually use it.</li>
+</ol>
+<p>Starting with components before foundations is the most common mistake. Without solid tokens, you end up with inconsistent buttons and duplicated effort later. The system should feel like a natural extension of your design language, not a separate thing to maintain.</p>
+<p>In my own practice, the first design system I built was chaotic because I jumped straight into components. The second one, built in the order above, became something the entire team (and clients) actually used and loved. The difference was night and day.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>A well-structured design system saves enormous time, reduces bugs, and creates visual consistency that builds trust with users. For freelancers and small teams, it is often the difference between constant rework and smooth, scalable delivery.</p>
+<p>As a Design Engineer, I now treat the design system as infrastructure, not decoration. In one client project, building the foundations and core components first let us deliver new screens 3–4 times faster after the initial investment. The honest reality is that the first month of building a design system feels slow, but every month after feels dramatically faster. Skipping the proper order leads to fragile systems that break under pressure.</p>
+<p>This practice also supports calm technology. A solid design system reduces decision fatigue for designers and developers, allowing everyone to focus on solving real problems instead of debating button styles.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>My own most recent design system for a SaaS client followed the foundations-first order. We started with a tight set of tokens, built 25 core components, then moved to patterns. Six months later, the team was shipping new features with almost no design debt. It became the backbone of the product.</p>
+<p>Many startups I’ve seen do the opposite: they create a beautiful component library first, then struggle with inconsistent spacing and colors when new screens are added. The system looks impressive in Figma but falls apart in production.</p>
+<p>A mid-sized product team I consulted with had a chaotic system with duplicated components. After auditing and rebuilding in the proper order (tokens → components → patterns), their velocity increased and designer-developer handoff friction dropped dramatically.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/the-freelance-design-engineer-s-minimum-tech-stack.html">The freelance Design Engineer&#x27;s minimum tech stack</a></li>
+    <li><a href="../entries/figma-vs-the-alternatives.html">Figma vs the alternatives</a></li>
+    <li><a href="../entries/notion-for-design-development-work.html">Notion for design + development work</a></li>
+    <li><a href="../entries/designing-with-and-around-ai.html">Designing with and around AI</a></li>
+    <li><a href="../entries/learning-to-code-as-a-designer.html">Learning to code as a designer</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Kholmatova, A. (2017). <em>Design Systems</em>. Smashing Magazine.</li>
+    <li>Frost, B. (2016). <em>Atomic Design</em>.</li>
+    <li>NN/g: Design Systems 101. <a href="https://www.nngroup.com/articles/design-systems-101/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Case, A. (2015). <em>Calm Technology</em>. O&#x27;Reilly Media.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

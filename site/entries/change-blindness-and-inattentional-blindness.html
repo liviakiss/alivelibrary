@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change blindness and inattentional blindness — ALIVE Library</title>
+<meta name="description" content="Change blindness is the failure to detect significant visual changes in a scene when they occur during a brief disruption or distraction; inattentional blindness is the failure to notice an unexpected but fully visible stimulus when attention is focused on another task.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/change-blindness-and-inattentional-blindness.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Change blindness and inattentional blindness — ALIVE Library">
+<meta property="og:description" content="Change blindness is the failure to detect significant visual changes in a scene when they occur during a brief disruption or distraction; inattentional blindness is the failure to notice an unexpected but fully visible stimulus when attention is focused on another task.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-c291e0a1-e684-4e62-8b74-1da5c2fcf85a_nx1tcm.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/change-blindness-and-inattentional-blindness.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html" class="active">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">MIND &AMP; BEHAVIOR</span>
+  <h1 class="entry-title">Change blindness and inattentional blindness</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Change blindness is the failure to detect significant visual changes in a scene when they occur during a brief disruption or distraction; inattentional blindness is the failure to notice an unexpected but fully visible stimulus when attention is focused on another task.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn split scene: left side shows the gorilla experiment with participants counting passes (gorilla faded or outlined as missed); right side a product page with the “Add to Cart” button changing to “Out of Stock” during interaction (attention spotlight narrowly focused on size selector, change in periphery). Arrows showing attention allocation and missed elements. Margin sketch of a user intently focused on one area while a large state change happens elsewhere.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>These phenomena reveal that seeing is not passive reception but an active, attention-dependent construction. In the famous “invisible gorilla” experiment by Simons and Chabris (1999), participants counting basketball passes by one team often completely missed a person in a gorilla suit walking through the scene. Inattentional blindness occurs because attention is narrowly allocated; resources simply don’t reach the unexpected item.</p>
+<p>Change blindness, studied through flicker paradigms or real-world interruptions (e.g., door studies or mud splashes), shows we miss even large alterations if a visual disruption masks the transition. The underlying mechanism is that visual working memory and attention are severely capacity-limited. We don’t maintain a detailed internal representation of the entire scene—we sample what matters for the current goal and assume continuity elsewhere.</p>
+<p>In my own testing sessions, I’ve repeatedly watched users miss obvious UI changes I had just implemented. The lesson was humbling: no matter how clear something appears to the designer who knows where to look, users operating under task-focused attention often operate in a different perceptual world.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>These blindnesses explain why users overlook “obvious” buttons, error messages, updated navigation, or critical status changes. We assume continuity and full awareness; the brain assumes sparsity and goal-relevance. The result is mismatched mental models, missed opportunities, and frustration when users say “I didn’t see that.”</p>
+<p>As a Design Engineer, this has made me far more conservative with reliance on visual changes alone. I now prioritize persistent cues, clear affordances, animations that guide rather than distract, and redundancy (e.g., combining visual and textual signals). In one dashboard project, a subtle color shift for warning states went completely unnoticed until we added a persistent badge and tooltip. The change was technically present — but perceptually invisible under real user attention loads.</p>
+<p>The deeper implication is humility about what users actually perceive. Good interfaces reduce the cognitive work of noticing by making important elements either highly salient relative to the user’s goal or explicitly called out. Ignoring these phenomena leads to designs that only work in designer mode, not user mode.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Vans.com mobile site illustrates change blindness during product selection. When a user chooses an unavailable size, the prominent “Add to Cart” button label quietly changes to “Out of Stock.” Because the user’s attention stays focused on the size and quantity selectors, and no strong visual disruption or cue draws the eye to the button, many completely miss the state change. The update happens, but perceptually it does not register.</p>
+<p>Monitoring interfaces in enterprise security tools or medical dashboards demonstrate inattentional blindness at scale. Operators intently focused on tracking specific metrics or alerts routinely miss unexpected but critical events appearing elsewhere on the same screen. High attentional load from the primary task renders even salient changes effectively invisible, sometimes with serious consequences.</p>
+<p>Well-designed productivity tools like Linear or Notion handle this more thoughtfully. Instead of relying on subtle badge updates or layout shifts, they use persistent visual anchors, clear textual summaries, and targeted highlighting that reliably breaks through focused attention without overwhelming the user. Changes feel noticeable because the design explicitly accounts for where attention is directed.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/how-attention-actually-works.html">How attention actually works</a></li>
+    <li><a href="../entries/working-memory-and-the-real-meaning-of-cognitive-load.html">Working memory and the real meaning of cognitive load</a></li>
+    <li><a href="../entries/designing-the-loading-state.html">Designing the loading state</a></li>
+    <li><a href="../entries/empty-states-that-respect-the-user.html">Empty states that respect the user</a></li>
+    <li><a href="../entries/the-peak-end-rule.html">The peak-end rule</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Simons, D.J., &amp; Chabris, C.F. (1999). &quot;Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events.&quot; <em>Perception</em>.</li>
+    <li>Jensen, M.S., et al. (2011). &quot;Change Blindness and Inattentional Blindness.&quot; <em>Wiley Interdisciplinary Reviews: Cognitive Science</em>.</li>
+    <li>NN/g: Change Blindness Definition. <a href="https://www.nngroup.com/articles/change-blindness-definition/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>The Decision Lab: Change Blindness. <a href="https://thedecisionlab.com/reference-guide/psychology/change-blindness" class="ref-link" target="_blank" rel="noopener">thedecisionlab.com</a></li>
+    <li>Verywell Mind: Inattentional Blindness. <a href="https://www.verywellmind.com/what-is-inattentional-blindness-2795020" class="ref-link" target="_blank" rel="noopener">verywellmind.com</a></li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

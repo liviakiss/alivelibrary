@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How attention actually works — ALIVE Library</title>
+<meta name="description" content="Selective attention is the brain’s mechanism for focusing on relevant stimuli while filtering out the irrelevant, operating as a limited-capacity filter that prevents sensory overload.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/how-attention-actually-works.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How attention actually works — ALIVE Library">
+<meta property="og:description" content="Selective attention is the brain’s mechanism for focusing on relevant stimuli while filtering out the irrelevant, operating as a limited-capacity filter that prevents sensory overload.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-c291e0a1-e684-4e62-8b74-1da5c2fcf85a_nx1tcm.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/how-attention-actually-works.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html" class="active">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">MIND &AMP; BEHAVIOR</span>
+  <h1 class="entry-title">How attention actually works</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Selective attention is the brain’s mechanism for focusing on relevant stimuli while filtering out the irrelevant, operating as a limited-capacity filter that prevents sensory overload.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn diagram of the brain’s attentional filter: incoming sensory streams (visual icons, sounds, notifications) approaching a narrow bottleneck. Some signals (goal-relevant or highly salient) pass through strengthened, others attenuated or blocked. Side-by-side interface examples: Kifli.hu checkout with competing elements fading versus the Citibank transfer screen with critical details ignored. Margin sketch of a busy grocery checkout or financial confirmation with key signals highlighted or faded based on user goal.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>The study of selective attention gained traction in the 1950s with the “cocktail party effect,” where people can follow one conversation in a noisy room while largely ignoring others — until their own name is mentioned. Donald Broadbent’s 1958 filter model proposed an early selection process: sensory information passes through a bottleneck where physical characteristics (loudness, location, color) determine what gets through for further semantic processing.</p>
+<p>Anne Treisman refined this in her attenuation theory (1964), suggesting the filter doesn’t completely block unattended information but weakens it. Salient or personally relevant signals can still break through at later stages. Later models, including load theory, added that the effectiveness of filtering depends on how demanding the primary task is — under high perceptual load, we filter more automatically; under low load, distractions slip in more easily.</p>
+<p>In practice, attention isn’t a spotlight we control perfectly. It’s a resource-constrained system shaped by both bottom-up salience (bright colors, motion, sudden sounds) and top-down goals (what we’re trying to achieve). I’ve noticed this repeatedly when building: no matter how clear I think an interface is, users will tunnel in on their immediate goal and miss “obvious” elements outside that narrow focus. The brain protects itself from overload by being ruthlessly selective, which is both an adaptive mechanism and a constant design constraint.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>For interfaces, selective attention explains why users miss things right in front of them. When we design dense screens, notifications, or multi-step flows, we’re fighting a system optimized for narrow focus rather than broad awareness. The implication is humility: assume most of what you put on screen will be filtered out unless it aligns with the user’s current goal or stands out in a way that respects perceptual limits.</p>
+<p>This has shaped my own practice more than any single principle. In one project, I spent hours perfecting a subtle status indicator for an important workflow state, only to watch usability sessions where users completely ignored it because their attention had already locked onto the primary submit button. The lesson stuck: I now start every layout by mapping what the user’s likely top-down goal is and ruthlessly stripping or de-emphasizing everything else.</p>
+<p>In AI features especially, where outputs can be dense or probabilistic, overloading the interface risks users missing critical confidence cues or edit options because their attention is locked on the primary generation. The honest lesson from shipping products is that good interfaces don’t demand more attention; they earn the limited amount users have available. Respecting selective attention often means designing for tunnel vision rather than fighting it.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Kifli.hu, the Hungarian online grocery platform, shows the mechanism in checkout. The page suggests “forgotten” items, some genuinely relevant and others disguised sponsored products unrelated to the user’s history. Under the high perceptual load of finalizing a purchase, users’ selective attention filters most of these as noise. The proceed button, styled similarly to common cookie banners, blends into the background, forcing some users to hunt for it. Competing salience under task pressure leads to filtering of even useful elements.</p>
+<p>The Citibank Flexcube incident (2020) offers a costly negative case. Experienced employees reviewing a high-value transfer screen missed critical details in the confirmation logic due to poor visual hierarchy. Their attention tunneled on the expected workflow, allowing a $900 million transfer — instead of the intended $7.8 million interest payment — to go through, with $500 million ultimately unrecoverable. The interface failed to break through their focused state with unmistakable signals.</p>
+<p>Many enterprise HR or compliance dashboards illustrate the problem on a daily scale. Workers focused on completing a specific form or report often filter out critical notifications and side-panel alerts entirely, creating compliance gaps or missed deadlines. I’ve reviewed logs from similar internal tools where important flags sat unread because they never pierced the user’s primary task tunnel.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/hick-s-law.html">Hick&#x27;s Law</a></li>
+    <li><a href="../entries/change-blindness-and-inattentional-blindness.html">Change blindness and inattentional blindness</a></li>
+    <li><a href="../entries/the-biology-of-stress-and-interface-design.html">The biology of stress and interface design</a></li>
+    <li><a href="../entries/designing-the-loading-state.html">Designing the loading state</a></li>
+    <li><a href="../entries/progressive-disclosure.html">Progressive disclosure</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Broadbent, D.E. (1958). <em>Perception and Communication</em>. Pergamon Press.</li>
+    <li>Treisman, A.M. (1964). &quot;Selective Attention in Man.&quot; <em>British Medical Bulletin</em>.</li>
+    <li>McLeod, S. (2018). Selective Attention. Simply Psychology. <a href="https://www.simplypsychology.org/attention-models.html" class="ref-link" target="_blank" rel="noopener">simplypsychology.org</a></li>
+    <li>UX Knowledge Base: Selective Attention &amp; Content Blindness. <a href="https://uxknowledgebase.com/selective-attention-content-blindness-in-ux-design-e53033b597c6" class="ref-link" target="_blank" rel="noopener">uxknowledgebase.com</a></li>
+    <li>Ars Technica: Citibank $500M UI Lesson. <a href="https://arstechnica.com/tech-policy/2021/02/citibank-just-got-a-500-million-lesson-in-the-importance-of-ui-design/" class="ref-link" target="_blank" rel="noopener">arstechnica.com</a></li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How LLMs actually work (and why it matters for designers) — ALIVE Library</title>
+<meta name="description" content="Large Language Models (LLMs) are next-token predictors: they generate text by statistically guessing the most likely next word (token) based on patterns in massive training data, within a limited context window, and without true understanding — which makes hallucination an inherent feature, not a bug.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/how-llms-actually-work-and-why-it-matters-for-designers.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How LLMs actually work (and why it matters for designers) — ALIVE Library">
+<meta property="og:description" content="Large Language Models (LLMs) are next-token predictors: they generate text by statistically guessing the most likely next word (token) based on patterns in massive training data, within a limited context window, and without true understanding — which makes hallucination an inherent feature, not a bug.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/how-llms-actually-work-and-why-it-matters-for-designers.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">How LLMs actually work (and why it matters for designers)</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Large Language Models (LLMs) are next-token predictors: they generate text by statistically guessing the most likely next word (token) based on patterns in massive training data, within a limited context window, and without true understanding — which makes hallucination an inherent feature, not a bug.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn diagram showing tokens flowing into a limited context window (a sliding frame), with the model predicting the next token probabilistically. Illustrate hallucination as confident but disconnected branches. Side-by-side: a clean short-context conversation versus a long, degraded one with fading coherence. Margin sketch of a context window filling up and “leaking” earlier information.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>At their core, LLMs are sophisticated autocomplete engines. Text is broken into tokens (roughly 3–4 characters or sub-words in English). The model predicts the next token probabilistically based on everything it has seen before, guided by patterns learned during training. There is no internal knowledge base or reasoning engine — just statistical associations at enormous scale.</p>
+<p>The <strong>context window</strong> is the amount of previous conversation (or prompt) the model can “see” at once. Everything outside that window is forgotten unless explicitly re-provided. <strong>Hallucination</strong> occurs when the model generates plausible-sounding but factually incorrect information because it is optimizing for fluency and pattern-matching, not truth. It doesn’t “know” facts — it knows what words tend to appear together.</p>
+<p>This architecture explains why the same prompt can produce different outputs, why long conversations degrade in quality, and why models confidently invent details when they lose the thread. Understanding these mechanics is not optional for designers — it directly determines what interaction patterns are safe and effective.</p>
+<p>In my own work integrating LLMs, this technical reality shifted my entire approach. I stopped treating the model as an intelligent assistant and started designing around its actual constraints: limited reliable context, probabilistic outputs, and no inherent grounding in reality. That shift made the interfaces more robust and trustworthy.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>Designers who don’t understand how LLMs work tend to create interfaces that fight the model’s nature. They expect deterministic behavior, perfect memory, or consistent reasoning — none of which the technology can reliably deliver. The result is brittle experiences, frustrated users, and eroded trust.</p>
+<p>As a Design Engineer, grasping tokens, context, and hallucination has become foundational. It influences everything from prompt engineering surfaced to users, to how we manage conversation history, surface uncertainty, and design recovery paths. In one research tool, recognizing the context window limits led us to implement automatic summarization of long threads and clear “starting fresh” options. Without that understanding, we would have built something that gradually became incoherent and unusable.</p>
+<p>For calm technology and responsible AI, this knowledge prevents over-promising. It leads to interfaces that work with the model’s strengths (creativity, synthesis, speed) while protecting users from its weaknesses (forgetfulness, fabrication, inconsistency). The honest practice is to design as if the AI is a helpful but slightly unreliable intern — capable of brilliance and capable of confident nonsense.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>ChatGPT’s conversation interface shows both the power and the limits. It handles reasonably long contexts well, but as conversations grow, coherence drops and hallucinations increase. Users who don’t understand the underlying mechanics often blame themselves or the product when quality degrades.</p>
+<p>Perplexity.ai demonstrates a more honest approach by grounding responses in search results and clearly citing sources. This design choice directly counters hallucination by giving the model external grounding within the context window, leading to higher reliability for factual queries.</p>
+<p>A code generation tool I worked on offered a mixed case. Early versions let long project contexts grow without management, resulting in increasingly irrelevant or incorrect suggestions. Adding explicit context controls, file selection, and regular “reset memory” options helped developers maintain better performance and trust, because the interface respected the model’s actual constraints.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/the-transparency-stack-in-ai-products.html">The transparency stack in AI products</a></li>
+    <li><a href="../entries/ai-confidence-indicators-done-honestly.html">AI confidence indicators done honestly</a></li>
+    <li><a href="../entries/designing-the-ai-failure-state.html">Designing the AI failure state</a></li>
+    <li><a href="../entries/the-chatbot-trap.html">The chatbot trap</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Bubeck, S., et al. (2023). &quot;Sparks of Artificial General Intelligence: Early experiments with GPT-4.&quot; arXiv.</li>
+    <li>Vaswani, A., et al. (2017). &quot;Attention Is All You Need.&quot; NeurIPS. (The Transformer architecture foundation).</li>
+    <li>Jacovi, A., et al. (2021). &quot;Formalizing Trust in Artificial Intelligence.&quot; ACM FAccT.</li>
+    <li>Budiu, R. (2023). &quot;Explainable AI in Chat Interfaces.&quot; Nielsen Norman Group. <a href="https://www.nngroup.com/articles/explainable-ai/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

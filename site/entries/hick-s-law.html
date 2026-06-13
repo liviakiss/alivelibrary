@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hick&#x27;s Law — ALIVE Library</title>
+<meta name="description" content="Hick&#x27;s Law states that the time it takes for a person to make a decision increases logarithmically with the number of choices available.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/hick-s-law.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hick&#x27;s Law — ALIVE Library">
+<meta property="og:description" content="Hick&#x27;s Law states that the time it takes for a person to make a decision increases logarithmically with the number of choices available.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-c291e0a1-e684-4e62-8b74-1da5c2fcf85a_nx1tcm.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/hick-s-law.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html" class="active">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">MIND &AMP; BEHAVIOR</span>
+  <h1 class="entry-title">Hick&#x27;s Law</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Hick&#x27;s Law states that the time it takes for a person to make a decision increases logarithmically with the number of choices available.</p>
+<!-- Visual suggestion (author note):
+A clean diagram showing reaction time (y-axis) plotted against number of choices (x-axis), with the characteristic logarithmic curve. Annotate key points: 1 choice (near-instant), 4–6 choices (practical sweet spot for many UIs), and 10+ (sharp rise). Side-by-side comparison of a cluttered enterprise dashboard or dense leasing site versus a streamlined onboarding flow like Duolingo's, with arrows indicating cognitive effort or time. Hand-drawn style with simple icons for stimuli would make the mechanism intuitive. A small margin sketch of the 6am decision menu collapsing into a single default path could make the personal lesson visual.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>In 1952, British psychologist W.E. Hick published "On the Rate of Gain of Information" in the <em>Quarterly Journal of Experimental Psychology</em>. Working with Ray Hyman, he built on earlier observations and information theory to show that choice reaction time grows with the logarithm of the number of stimulus-response alternatives.</p>
+<p>In classic experiments, participants faced lights in different positions and pressed corresponding keys. As the set of possible lights increased from 1 to 10, reaction time didn't rise linearly — it followed a logarithmic curve. More options meant more uncertainty (measured in "bits" of information), and the brain needed extra time to resolve it. This relationship holds across many simple choice tasks, though real-world factors like familiarity, practice, and stimulus discriminability moderate it.</p>
+<p>What Hick's Law reveals beneath the surface is not just slower button-pressing, but the cognitive work of resolving uncertainty. The brain doesn't passively scan options; it actively processes probabilities, eliminates alternatives, and prepares a response. Each additional choice adds mental overhead. In modern terms, this ties into selective attention and working memory limits — the more options compete for processing, the harder it becomes to act decisively.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>The real cost of choice isn't just a few extra seconds of deliberation. It's that the mental energy you sat down to spend on the actual task gets quietly consumed by the act of choosing. Under even mild time pressure or daily fatigue, the range of options you consider degrades while you're still inside the decision. By the time you finally act, you're often working with a diminished set.</p>
+<p>I learned this the hard way with my 6am workout habit. For months I kept a long mental menu: run outside, lift weights, yoga video, bodyweight circuit, or "just stretch and walk." Each morning the decision itself ate the limited willpower I had reserved for movement. Some days I'd spend ten minutes weighing options, feel the window closing, and end up doing nothing. The interface of my own intention had too many equally viable paths. When I simplified to one default (a 20-minute bodyweight routine) plus one easy swap (run if the weather felt right), the habit finally stuck. The constraint didn't limit me — it protected the resource I actually cared about.</p>
+<p>For designers and builders this is the sharper lesson. Backend flexibility makes it easy to expose many options, but each one competes for the user's finite attention budget. In high-stakes or habitual flows — onboarding, daily tools, checkout — we should design systems that quickly surface or enforce <strong>the one constraint that renders most alternatives irrelevant</strong>. Progressive disclosure, smart defaults, and clear hierarchies aren't just polish; they're mechanisms for preserving user energy for the work that matters.</p>
+<p>As someone bridging design and code, I've watched teams add toggles and filters because "users might want them." They usually do — until the moment they don't, because the cognitive tax arrives first. This becomes even more critical in AI products, where the model already introduces unpredictability. Layering choice overload on top of probabilistic outputs is a fast path to distrust and abandonment. The honest practice is humility: build interfaces that respect the brain's limits rather than testing them. Often, reducing perceived choice quietly increases real agency.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Duolingo offers a strong positive example in its onboarding. New users are not dumped into a full menu of language courses, skills, and settings. Instead, the app starts with one simple exercise after a minimal goal-setting step. Features are introduced gradually through guided practice rather than overwhelming choice. This respects Hick's Law by keeping early decisions minimal, helping users build momentum before complexity arrives.</p>
+<p>X (formerly Twitter) applies it well in its mobile bottom navigation: a handful of core items (Home, Explore, Communities, Notifications, Messages) plus a clear compose button. The limited set allows quick orientation even for new or distracted users. Complexity lives deeper in the app rather than competing at the primary level.</p>
+<p>On the negative side, Microsoft's Windows 8 interface struggled with choice overload. The tile-based Start screen presented a dense, sprawling array of live tiles and options without strong initial hierarchy or progressive disclosure for many users. What was intended as modern flexibility often left people scanning, hesitating, and feeling lost, contributing to slow adoption and frustration.</p>
+<p>LINGsCARS.com shows that choice cost is not universal. Its famously cluttered homepage — flashing text, competing offers, and dense navigation — violates Hick's Law on almost every measure. Yet it works for a specific segment: highly motivated bargain hunters who arrive with strong prior commitment to finding a deal. For these users, motivation overrides the cognitive tax. For everyone else, the site feels exhausting. It quietly illustrates how strong external drivers can moderate the law's effect, even as poor architecture limits broader appeal.</p>
+<p>Many enterprise dashboards also illustrate the downside. I've seen internal tools with 20+ filter toggles, metric cards, and sidebar options visible at once. Teams report spending noticeable time just deciding where to start or what to adjust, slowing down real work.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/working-memory-and-the-real-meaning-of-cognitive-load.html">Working memory and the real meaning of cognitive load</a></li>
+    <li><a href="../entries/progressive-disclosure.html">Progressive disclosure</a></li>
+    <li><a href="../entries/the-myth-of-the-neutral-default.html">The myth of the neutral default</a></li>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/empty-states-that-respect-the-user.html">Empty states that respect the user</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Hick, W.E. (1952). &quot;On the Rate of Gain of Information.&quot; <em>Quarterly Journal of Experimental Psychology</em>, 4(1), 11–26. (Seminal paper)</li>
+    <li>Proctor, R.W., &amp; Schneider, D.W. (2018). &quot;Hick&#x27;s Law for Choice Reaction Time: A Review.&quot; <em>Quarterly Journal of Experimental Psychology</em>.</li>
+    <li>Laws of UX: Hick&#x27;s Law — practical overview with examples. <a href="https://lawsofux.com/hicks-law/" class="ref-link" target="_blank" rel="noopener">lawsofux.com</a></li>
+    <li>The Decision Lab: Hick&#x27;s Law. <a href="https://thedecisionlab.com/reference-guide/design/hicks-law" class="ref-link" target="_blank" rel="noopener">thedecisionlab.com</a></li>
+    <li>Interaction Design Foundation: Hick&#x27;s Law article. <a href="https://www.interaction-design.org/literature/article/hick-s-law-making-the-choice-easier-for-users" class="ref-link" target="_blank" rel="noopener">interaction-design.org</a></li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

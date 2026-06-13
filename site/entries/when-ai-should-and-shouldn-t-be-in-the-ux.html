@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When AI should and shouldn&#x27;t be in the UX — ALIVE Library</title>
+<meta name="description" content="When AI should and shouldn&#x27;t be in the UX is a deliberate decision framework that evaluates whether a probabilistic, opaque system adds meaningful value for the user in a specific context — rather than treating AI as a default enhancement for every feature.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/when-ai-should-and-shouldn-t-be-in-the-ux.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="When AI should and shouldn&#x27;t be in the UX — ALIVE Library">
+<meta property="og:description" content="When AI should and shouldn&#x27;t be in the UX is a deliberate decision framework that evaluates whether a probabilistic, opaque system adds meaningful value for the user in a specific context — rather than treating AI as a default enhancement for every feature.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/when-ai-should-and-shouldn-t-be-in-the-ux.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">When AI should and shouldn&#x27;t be in the UX</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">When AI should and shouldn&#x27;t be in the UX is a deliberate decision framework that evaluates whether a probabilistic, opaque system adds meaningful value for the user in a specific context — rather than treating AI as a default enhancement for every feature.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn decision tree or matrix: one axis “AI Strength” (creativity vs accuracy), the other “User Need for Certainty.” Highlight green zones where AI belongs and red zones where it should be avoided or made optional. Side-by-side interface examples: a calm, AI-optional writing tool versus a cluttered interface with AI forced into every corner. Margin sketch of a designer at a crossroads choosing between “add AI” and “does the user actually need this?”
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>AI is not a universal upgrade. It excels at pattern matching, generation, and scaling certain tasks, but it is also unpredictable, sometimes hallucinatory, and often opaque. The responsible approach is to treat AI as one tool among many, not the default solution.</p>
+<p>A practical decision framework asks these questions:</p>
+<ul>
+<li>Does the task benefit from probabilistic creativity or strict accuracy?</li>
+<li>Can the user easily verify or correct the output?</li>
+<li>Does the AI reduce cognitive load or increase it through uncertainty?</li>
+<li>Is the benefit worth the transparency, latency, and failure costs?</li>
+<li>Would the feature work well (or better) without AI?</li>
+</ul>
+<p>If the honest answer leans no on several points, the feature should remain deterministic or human-driven. Defaulting to AI often stems from hype, competitive pressure, or technical excitement rather than user need.</p>
+<p>In my own building, this framework was a corrective. Early on I added AI suggestions to almost every surface because the APIs were available and the demos looked impressive. Some features improved; many became noisy distractions or sources of user frustration. Stepping back and applying these questions helped me remove or redesign several features. The products became simpler, more reliable, and ultimately more useful.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>Treating AI as a default creates bloated, unpredictable interfaces that erode trust and increase cognitive load. A good decision framework forces intentionality: we add AI only where it genuinely serves the user, not where it serves our desire to appear cutting-edge.</p>
+<p>As a Design Engineer, this framework now acts as a gatekeeper. In one project, we evaluated an AI-powered search enhancement. The model produced creative results but introduced frequent hallucinations in a domain where accuracy mattered. We kept a traditional deterministic search as primary and made AI an optional “explore” mode with clear uncertainty signals. Users got the best of both worlds without the risk of misleading defaults.</p>
+<p>For calm technology, this restraint is essential. AI can be magical when used appropriately, but when added indiscriminately it introduces uncertainty, latency, and opacity that work against calm. The honest practice is to design human-first experiences and use AI as a supporting actor only when it clearly improves the user’s ability to achieve their goals.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Notion’s AI features show thoughtful restraint. AI is available as an opt-in assistant for writing and brainstorming rather than inserted everywhere by default. Users can invoke it when they want creative help, maintaining control and reducing noise in everyday workflows.</p>
+<p>Many consumer apps during the 2023–2025 AI boom illustrate the opposite: AI chat buttons, auto-summaries, and generative features added to every screen with little user control or clear value. The result was often overwhelming interfaces that felt slower and less predictable than their non-AI predecessors.</p>
+<p>A task management tool I worked on offered a mixed case. We initially added AI task suggestions by default. After user testing revealed frequent irrelevant recommendations, we changed to an explicit “suggest similar tasks” button. The feature became genuinely useful for some users without cluttering the core experience for everyone else.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/the-chatbot-trap.html">The chatbot trap</a></li>
+    <li><a href="../entries/the-transparency-stack-in-ai-products.html">The transparency stack in AI products</a></li>
+    <li><a href="../entries/trust-calibration-in-ai-features.html">Trust calibration in AI features</a></li>
+    <li><a href="../entries/what-calm-technology-actually-means.html">What &quot;calm technology&quot; actually means</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Amershi, S., et al. (2019). &quot;Guidelines for Human-AI Interaction.&quot; CHI Conference.</li>
+    <li>Jacovi, A., et al. (2021). &quot;Formalizing Trust in Artificial Intelligence.&quot; ACM FAccT.</li>
+    <li>Budiu, R. (2023). &quot;Explainable AI in Chat Interfaces.&quot; Nielsen Norman Group. <a href="https://www.nngroup.com/articles/explainable-ai/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Bowles, C. (2018). <em>Future Ethics</em>.</li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

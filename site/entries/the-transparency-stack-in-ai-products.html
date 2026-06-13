@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The transparency stack in AI products — ALIVE Library</title>
+<meta name="description" content="The transparency stack is a layered approach to communicating AI limitations and processes — from visible sources and confidence signals to clear explanations and easy opt-outs — so users can understand, trust appropriately, and maintain control.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/the-transparency-stack-in-ai-products.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The transparency stack in AI products — ALIVE Library">
+<meta property="og:description" content="The transparency stack is a layered approach to communicating AI limitations and processes — from visible sources and confidence signals to clear explanations and easy opt-outs — so users can understand, trust appropriately, and maintain control.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/the-transparency-stack-in-ai-products.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">The transparency stack in AI products</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">The transparency stack is a layered approach to communicating AI limitations and processes — from visible sources and confidence signals to clear explanations and easy opt-outs — so users can understand, trust appropriately, and maintain control.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn layered stack diagram: bottom layer “Sources & Citations,” middle “Confidence & Uncertainty Indicators,” top “Explanations + Controls/Opt-outs.” Arrows showing information flowing upward as needed by the user. Side-by-side interface examples: a bare, confident response versus a fully transparent one with visible layers. Margin sketch of a user peeling back layers like an onion to see what’s underneath.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>AI systems are inherently opaque. Users cannot see the training data, the exact reasoning path, or the probabilistic nature of each output. Without deliberate transparency design, people are left guessing whether to trust a response. The transparency stack addresses this by providing information at multiple levels of depth, allowing users to engage at the level they need.</p>
+<p>The layers typically include:</p>
+<ul>
+<li><strong>Source citation</strong> — grounding outputs in verifiable references.</li>
+<li><strong>Confidence indicators</strong> — communicating uncertainty or likelihood.</li>
+<li><strong>Explanations / reasoning traces</strong> — showing how the model arrived at an answer.</li>
+<li><strong>Controls and opt-outs</strong> — easy ways to edit, regenerate, dismiss, or disable features.</li>
+</ul>
+<p>This layered approach respects different user contexts and expertise levels. A researcher may want deep citations; a casual user may only need a simple confidence score and an edit button. Good transparency reduces both over-trust (leading to errors) and under-trust (leading to abandonment).</p>
+<p>In my own AI projects, implementing even basic layers dramatically changed outcomes. Early versions presented clean answers with no context. Users either accepted hallucinations as fact or stopped using the tool after one bad experience. Adding progressive transparency — starting with confidence badges and inline citations, then easy verification tools — turned fragile interactions into reliable collaboration. The interface became a partner instead of a black box.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>Transparency is not a nice-to-have in AI products — it is the foundation of calibrated trust. Without it, users cannot develop accurate mental models, and the relationship between human and AI remains brittle. In high-stakes domains (medicine, finance, education, code), poor transparency can cause real harm.</p>
+<p>As a Design Engineer, this stack has become a core checklist. In one research assistance tool, we layered citations at the bottom, confidence indicators next to claims, and prominent “verify” and “edit” buttons. Users reported feeling more in control and made fewer blind acceptances of incorrect information. The product was slower to “wow” users initially but earned deeper, longer-lasting adoption.</p>
+<p>For calm technology and ethical AI, transparency reduces cognitive load and stress. Users don’t have to maintain constant vigilance against potential mistakes. Honest interfaces allow people to relax into productive flow rather than second-guessing every output. The deeper practice is humility: we acknowledge the AI’s limitations openly so users can compensate for them intelligently.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Perplexity.ai exemplifies a strong transparency stack. Every answer includes inline citations, clear confidence-like signals through source quality, and easy options to ask follow-ups or regenerate. Users can quickly verify claims without leaving the interface, creating appropriate trust levels.</p>
+<p>Many early chatbot implementations showed the opposite problem. They presented every response with equal confidence and polished language, with no sources or uncertainty markers. This led to widespread hallucination acceptance until errors surfaced and trust collapsed.</p>
+<p>A content generation tool I worked on for a client offered a mixed but instructive case. Initial versions showed clean outputs with minimal context. After adding layered transparency — confidence scores, source highlights where possible, and prominent edit/regenerate buttons — users engaged more confidently and caught issues faster. The improvement in perceived reliability was noticeable even though the underlying model hadn’t changed.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/designing-the-ai-failure-state.html">Designing the AI failure state</a></li>
+    <li><a href="../entries/how-llms-actually-work-and-why-it-matters-for-designers.html">How LLMs actually work (enough for designers)</a></li>
+    <li><a href="../entries/trust-calibration-in-ai-features.html">Trust calibration in AI features</a></li>
+    <li><a href="../entries/informed-consent-in-product-design.html">Informed consent in product design</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Jacovi, A., et al. (2021). &quot;Formalizing Trust in Artificial Intelligence: Prerequisites, Causes and Goals of Human Trust in AI.&quot; ACM FAccT.</li>
+    <li>Bai, Y., et al. (2022). &quot;Constitutional AI: Harmlessness from AI Feedback.&quot; arXiv.</li>
+    <li>Bubeck, S., et al. (2023). &quot;Sparks of Artificial General Intelligence: Early experiments with GPT-4.&quot; arXiv.</li>
+    <li>Budiu, R. (2023). &quot;Explainable AI in Chat Interfaces.&quot; Nielsen Norman Group. <a href="https://www.nngroup.com/articles/explainable-ai/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

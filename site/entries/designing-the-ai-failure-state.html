@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing the AI failure state — ALIVE Library</title>
+<meta name="description" content="Designing the AI failure state means treating errors, hallucinations, and limitations not as edge cases to hide, but as critical moments where the relationship between user and system is either strengthened through honesty and recovery or broken through evasion and blame.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/designing-the-ai-failure-state.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Designing the AI failure state — ALIVE Library">
+<meta property="og:description" content="Designing the AI failure state means treating errors, hallucinations, and limitations not as edge cases to hide, but as critical moments where the relationship between user and system is either strengthened through honesty and recovery or broken through evasion and blame.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/designing-the-ai-failure-state.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">Designing the AI failure state</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Designing the AI failure state means treating errors, hallucinations, and limitations not as edge cases to hide, but as critical moments where the relationship between user and system is either strengthened through honesty and recovery or broken through evasion and blame.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn before/after failure moment: left side shows a broken AI output with no explanation or recovery (user looking frustrated/betrayed); right side shows the same failure with clear admission, confidence signals, and prominent regenerate/edit/dismiss buttons (user looking in control and calm). Include trust meter dropping sharply on poor handling versus recovering on good handling. Margin sketch of an AI “apology” or honest admission icon next to helpful recovery tools.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>AI failures are inevitable. Models hallucinate, lose context, misunderstand intent, or produce low-quality output. The question is not whether failures will occur, but how the interface responds when they do. This moment — the failure state — is disproportionately important for trust calibration.</p>
+<p>Good failure design is transparent, actionable, and humble. It admits the limitation clearly, offers immediate recovery paths (regenerate, edit, dismiss, provide feedback), and gives the user control. Bad failure design deflects responsibility (“Try rephrasing your prompt”), hides the error, or presents flawed output with the same polish as correct results. Users notice these moments acutely. They form lasting judgments about whether the system respects them or is trying to manipulate them.</p>
+<p>In my own projects, I have seen how failure states make or break adoption. Early AI features I shipped would simply output nonsense without explanation or recovery options. Users quickly lost faith. When we started treating failures as first-class design surfaces — with clear explanations, one-click alternatives, and easy escalation to human-like correction — the same models felt far more trustworthy. Trust was often rebuilt stronger after a well-handled failure than after a string of perfect outputs.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>The failure state is where most users decide whether an AI feature is worth using long-term. A graceful failure builds confidence that the system is honest and collaborative. A poor one confirms fears that the AI is unreliable or deceptive.</p>
+<p>As a Design Engineer, I now audit every AI surface by asking: What happens when this goes wrong? In one summarization tool, we replaced vague error messages with specific feedback (“This section had low source confidence — would you like me to regenerate with stricter sources?”) plus easy edit tools. Users recovered quickly and continued using the feature instead of abandoning it. The product felt reliable even when imperfect.</p>
+<p>For calm technology, excellent failure design is essential. Users cannot stay calm if they fear the AI will quietly mislead them or leave them stuck. Honest, recoverable failures reduce anxiety and cognitive load. They turn potential frustration into a moment of collaboration. Ignoring this means building systems that work great until the first real failure — at which point trust collapses.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Perplexity.ai handles failure states relatively well by clearly noting when sources are weak or information is uncertain and offering easy follow-up questions or regeneration. Users feel supported rather than deceived when results are imperfect.</p>
+<p>Many general chat interfaces still fail badly here. They respond to nonsense prompts with equally confident nonsense or deflect with generic phrases like “I’m still learning.” This evasion destroys trust faster than the original mistake.</p>
+<p>A code assistance feature I worked on offered a mixed but instructive case. Early versions would suggest broken code silently. After adding prominent warnings for low-confidence suggestions, inline explanations of potential issues, and one-click “fix this” or “show alternatives,” developers became much more willing to experiment with the AI because failures felt safe and recoverable.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/the-transparency-stack-in-ai-products.html">The transparency stack in AI products</a></li>
+    <li><a href="../entries/ai-confidence-indicators-done-honestly.html">AI confidence indicators done honestly</a></li>
+    <li><a href="../entries/the-regenerate-edit-dismiss-pattern.html">The regenerate / edit / dismiss pattern</a></li>
+    <li><a href="../entries/trust-calibration-in-ai-features.html">Trust calibration in AI features</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Amershi, S., et al. (2019). &quot;Guidelines for Human-AI Interaction.&quot; CHI Conference.</li>
+    <li>Jacovi, A., et al. (2021). &quot;Formalizing Trust in Artificial Intelligence.&quot; ACM FAccT.</li>
+    <li>Budiu, R. (2023). &quot;Explainable AI in Chat Interfaces.&quot; Nielsen Norman Group. <a href="https://www.nngroup.com/articles/explainable-ai/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+    <li>Parasuraman, R., &amp; Riley, V. (1997). &quot;Humans and Automation: Use, Misuse, Disuse, Abuse.&quot; <em>Human Factors</em>.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

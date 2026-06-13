@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing for AI uncertainty — ALIVE Library</title>
+<meta name="description" content="Designing for AI uncertainty means explicitly communicating the probabilistic and fallible nature of AI outputs so users can calibrate their trust, verify when needed, and make informed decisions rather than blindly accepting or rejecting results.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/designing-for-ai-uncertainty.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Designing for AI uncertainty — ALIVE Library">
+<meta property="og:description" content="Designing for AI uncertainty means explicitly communicating the probabilistic and fallible nature of AI outputs so users can calibrate their trust, verify when needed, and make informed decisions rather than blindly accepting or rejecting results.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/designing-for-ai-uncertainty.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">Designing for AI uncertainty</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Designing for AI uncertainty means explicitly communicating the probabilistic and fallible nature of AI outputs so users can calibrate their trust, verify when needed, and make informed decisions rather than blindly accepting or rejecting results.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn spectrum of AI confidence: left side a glowing, overly confident oracle (dangerous over-trust); center a balanced collaborator with visible uncertainty bars, citations, and edit handles; right side a dismissed, low-confidence tool (under-trust). Include a user figure adjusting dials or verifying sources. Side-by-side interface examples: polished but risky response versus one with clear uncertainty markers. Margin sketch of a probability curve or confidence thermometer next to AI output.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>Large language models and generative AI systems are fundamentally stochastic. They predict tokens based on probabilities learned from training data, not from grounded understanding or deterministic logic. The same prompt can produce meaningfully different outputs depending on temperature settings, context window, and random sampling. Hallucinations — confident-sounding but incorrect information — are not occasional bugs but an inherent feature of how these models work.</p>
+<p>Good AI UX acknowledges this reality instead of hiding it. Users need visible signals about confidence, sources, limitations, and variability so they can treat AI as a powerful but imperfect collaborator rather than an oracle. This includes confidence indicators, citation of sources, edit/regenerate/dismiss patterns, and clear language about what the model can and cannot do reliably.</p>
+<p>In my own work building with AI, this was a painful but necessary lesson. Early prototypes presented outputs as clean, authoritative answers. Users either trusted them too much (leading to errors) or dismissed the tool entirely after one hallucination. Shifting to honest uncertainty design — showing confidence ranges, surfacing sources, and making verification easy — dramatically improved both usability and trust. The interface stopped pretending the AI was perfect and started helping users work with its actual nature.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>Uncertainty is the central challenge of AI interfaces. Without thoughtful design, users swing between dangerous over-trust and unproductive skepticism. Neither serves them. Designing for uncertainty turns a fundamental limitation into a feature: it builds calibrated trust, reduces costly mistakes, and helps users develop healthy mental models of what AI can and cannot do.</p>
+<p>As a Design Engineer, this has become my most important lens when working with generative systems. In one writing assistance tool, we moved from presenting AI suggestions as polished final text to showing them with visible confidence indicators, inline source highlights, and easy “edit this part” affordances. Error rates dropped and user satisfaction increased because people could use the AI more effectively without constant second-guessing.</p>
+<p>This principle is especially critical for calm technology and human-centered AI. Interfaces that obscure uncertainty create stress and erode agency. Honest ones reduce cognitive load by making the AI’s limitations legible, allowing users to stay in control. The deeper practice is humility: we are not designing perfect intelligence; we are designing collaboration between fallible humans and probabilistic machines.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Perplexity.ai demonstrates strong handling of uncertainty. It presents answers with inline citations, clearly marks when information might be uncertain, and makes source verification trivial. Users learn to trust the system where appropriate and verify where needed, creating a healthy collaborative dynamic.</p>
+<p>Many early chatbot implementations illustrate the opposite. They present every response with equal confidence and polished language, leading users to treat hallucinations as facts. When errors inevitably appear, trust collapses and users abandon the tool.</p>
+<p>GitHub Copilot offers a mixed but evolving case. Its inline suggestions include acceptance rates and context awareness, but early versions sometimes presented incorrect code with the same visual weight as correct suggestions. Later improvements with better confidence signaling and “explain this” options have helped developers calibrate their reliance more effectively.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/the-transparency-stack-in-ai-products.html">The transparency stack in AI products</a></li>
+    <li><a href="../entries/designing-the-ai-failure-state.html">Designing the AI failure state</a></li>
+    <li><a href="../entries/how-llms-actually-work-and-why-it-matters-for-designers.html">How LLMs actually work (enough for designers)</a></li>
+    <li><a href="../entries/trust-calibration-in-ai-features.html">Trust calibration in AI features</a></li>
+    <li><a href="../entries/informed-consent-in-product-design.html">Informed consent in product design</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Bubeck, S., et al. (2023). &quot;Sparks of Artificial General Intelligence: Early experiments with GPT-4.&quot; arXiv.</li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+    <li>Jacovi, A., et al. (2021). &quot;Formalizing Trust in Artificial Intelligence: Prerequisites, Causes and Goals of Human Trust in AI.&quot; ACM FAccT.</li>
+    <li>Bai, Y., et al. (2022). &quot;Constitutional AI: Harmlessness from AI Feedback.&quot; arXiv.</li>
+    <li>Budiu, R. (2023). &quot;Explainable AI in Chat Interfaces.&quot; Nielsen Norman Group. <a href="https://www.nngroup.com/articles/explainable-ai/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

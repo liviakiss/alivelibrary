@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI and consent — ALIVE Library</title>
+<meta name="description" content="AI consent means giving users clear, ongoing, and meaningful understanding of how their inputs and interactions are used — specifically whether they contribute to model training/fine-tuning or remain private to the current inference session — with genuine, low-friction ability to opt out or control that usage.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/ai-and-consent.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI and consent — ALIVE Library">
+<meta property="og:description" content="AI consent means giving users clear, ongoing, and meaningful understanding of how their inputs and interactions are used — specifically whether they contribute to model training/fine-tuning or remain private to the current inference session — with genuine, low-friction ability to opt out or control that usage.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/ai-and-consent.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">AI and consent</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">AI consent means giving users clear, ongoing, and meaningful understanding of how their inputs and interactions are used — specifically whether they contribute to model training/fine-tuning or remain private to the current inference session — with genuine, low-friction ability to opt out or control that usage.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn flow diagram: user input → branching paths for “Inference only (private)” versus “Used for training (model improvement)” with clear toggle controls and deletion options. Show a user looking confident with transparent controls versus uneasy with murky data flows. Margin sketch of a locked conversation icon versus one feeding a growing model with visible consent indicators.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>AI systems use user data in two distinct ways: temporary <strong>inference context</strong> (what the model sees during a single conversation) and <strong>training/fine-tuning</strong> (data that improves the underlying model for everyone). Many products blur or obscure this distinction. Users may believe their chat is ephemeral and private when it is actually being stored and used to train future versions of the model.</p>
+<p>True AI consent requires explicit transparency about these flows and real agency: clear explanations at the point of interaction, easy toggles for “don’t use my data for training,” and the ability to delete history without losing core functionality. It goes far beyond one-time legal checkboxes to ongoing, revocable understanding. When users later discover their private conversations were used for training, the sense of betrayal is particularly strong.</p>
+<p>In my own AI projects, this distinction created recurring tension. Early versions used broad consent language that technically covered training but felt slippery. Users who cared deeply about privacy were uncomfortable, and some were surprised when they learned their chats contributed to model improvement. Shifting to contextual notices (“This conversation may be used to improve the model — disable anytime”) and simple account-level controls improved trust and reduced support issues. The honest version required more design effort but aligned the product with calm and respectful principles.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>AI consent is foundational to ethical and calm technology. Without clear separation between inference and training, users cannot make informed choices about participating in systems that shape both their experience and the broader model. Poor practices create hidden costs: privacy concerns, regulatory risk, and backlash when practices become public.</p>
+<p>As a Design Engineer, I now treat training consent as a distinct decision point. In one collaborative writing tool, we moved from implicit broad training consent to explicit per-conversation toggles and visible data usage summaries. The initial activation was slightly lower, but users felt more in control and the product avoided the “my private notes are training the model?” surprise that damages long-term trust.</p>
+<p>For calm technology, meaningful AI consent reduces background anxiety. Users cannot relax into a tool if they constantly wonder whether their data is secretly improving someone else’s model. Honest consent design supports agency and long-term trust instead of extracting participation through obscurity.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Signal maintains strong standards by minimizing data collection and being transparent about what little is retained. When it has introduced AI features, it has prioritized user control over training data, reinforcing its privacy-first reputation.</p>
+<p>Many general-purpose AI chat products illustrate the problem. Users type sensitive or creative work into the interface under the assumption it is private, only to later learn (often via news or policy updates) that conversations were used for training. The resulting backlash and loss of trust has been significant for several major models.</p>
+<p>A writing assistance tool I worked on offered a mixed but instructive case. Initial versions used user conversations for model improvement with broad consent buried in terms of service. After introducing clear in-app toggles (“Use this chat for training?”) and easy history deletion, user comfort increased measurably and complaints about data usage dropped. The feature still improved from user data where permitted, but only with informed, revocable participation.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/informed-consent-in-product-design.html">Informed consent in product design</a></li>
+    <li><a href="../entries/the-transparency-stack-in-ai-products.html">The transparency stack in AI products</a></li>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/trust-calibration-in-ai-features.html">Trust calibration in AI features</a></li>
+    <li><a href="../entries/the-myth-of-the-neutral-default.html">The myth of the neutral default</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Acquisti, A., Brandimarte, L., &amp; Loewenstein, G. (2015). &quot;Privacy and Human Behavior in the Age of Information.&quot; <em>Science</em>.</li>
+    <li>Gray, C. M., et al. (2018). &quot;The Dark (Patterns) Side of UX Design.&quot; CHI Conference.</li>
+    <li>Case, A. (2015). <em>Calm Technology</em>. O&#x27;Reilly Media.</li>
+    <li>Utz, C., et al. (2019). &quot;(Un)informed Consent: Studying GDPR Consent Notices.&quot; ACM CCS.</li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

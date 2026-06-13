@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing the loading state — ALIVE Library</title>
+<meta name="description" content="Designing the loading state is the practice of shaping how users experience delays so that waiting feels shorter, more transparent, and less frustrating, even when actual performance cannot be improved.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/designing-the-loading-state.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Designing the loading state — ALIVE Library">
+<meta property="og:description" content="Designing the loading state is the practice of shaping how users experience delays so that waiting feels shorter, more transparent, and less frustrating, even when actual performance cannot be improved.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-3b2786bb-fd87-4d36-a1b3-659ae57b6abd_thmrjf.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/designing-the-loading-state.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html" class="active">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">PATTERNS &AMP; PRACTICE</span>
+  <h1 class="entry-title">Designing the loading state</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Designing the loading state is the practice of shaping how users experience delays so that waiting feels shorter, more transparent, and less frustrating, even when actual performance cannot be improved.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn comparison of loading experiences: left side a lonely spinner with no context (user looking impatient); right side a rich skeleton screen with progressive fill, status message, and calm animation (user looking patient and informed). Annotate perceived time with stretching/compressing clocks. Margin sketch of a blank screen transforming into a meaningful loading state.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>Users don’t judge speed solely by how fast something actually loads — they judge it by how it <em>feels</em>. Research on perceived performance shows that uncertainty makes waiting feel longer, while progress feedback, meaningful activity, and reduced anxiety make it feel shorter. Even moderate delays (around 2 seconds or more) reliably increase stress and perceived slowness.</p>
+<p>Good loading states provide orientation (what is happening), expectation (how long it might take), and engagement (something useful or calming to look at). Skeleton screens, progress bars, animated illustrations, or contextual messages can all help. Poor ones leave users staring at a spinner with no information, amplifying frustration.</p>
+<p>In my own building, I learned this through repeated testing. A backend process that took 4–6 seconds felt unbearable with a plain spinner. Adding a skeleton layout that filled in progressively, plus a light status message, made the same delay feel acceptable. The technical loading time hadn’t changed, but the user experience had. This taught me that loading states are not technical necessities — they are critical design surfaces.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>Loading states are inevitable, especially with network calls, complex queries, or AI generation. How we design them directly affects perceived performance, user patience, and overall satisfaction. A thoughtful loading state can make a slower product feel faster and more polished than a faster one with poor feedback.</p>
+<p>As a Design Engineer, I now give loading states the same attention as primary interactions. In one analytics dashboard, replacing generic spinners with skeleton screens and estimated time messages reduced perceived slowness and user complaints noticeably. The change required almost no backend work but delivered a much calmer experience.</p>
+<p>This principle is central to calm technology. Waiting is a moment of vulnerability. Honest, respectful loading design reduces anxiety and maintains flow. Poor design breaks immersion and creates low-grade stress. The honest practice is to treat every delay as an opportunity to show respect for the user’s time and attention.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Linear.app excels at loading states. It uses thoughtful skeleton screens that mirror the final layout, subtle animations, and clear status messages. Even when data takes a moment to load, the experience feels fast and polished.</p>
+<p>Many older enterprise dashboards illustrate the opposite. A plain spinning wheel with no context or progress indication makes even short delays feel interminable, increasing user frustration and abandonment.</p>
+<p>A reporting tool I worked on offered a mixed case. Original loading states were basic spinners. After implementing skeleton layouts, percentage progress where possible, and reassuring messages (“Crunching the numbers…”), users reported the tool felt significantly faster even though actual query times were unchanged.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/progressive-disclosure.html">Progressive disclosure</a></li>
+    <li><a href="../entries/empty-states-that-respect-the-user.html">Empty states that respect the user</a></li>
+    <li><a href="../entries/the-real-cost-of-a-notification.html">The real cost of a notification</a></li>
+    <li><a href="../entries/form-design-and-the-truth-about-length.html">Form design and the truth about length</a></li>
+    <li><a href="../entries/designing-the-ai-failure-state.html">Designing the AI failure state</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Nielsen, J. (1993). &quot;Response Times: The 3 Important Limits.&quot; NN/g.</li>
+    <li>NN/g: Skeleton Screens. <a href="https://www.nngroup.com/articles/skeleton-screens/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Case, A. (2015). <em>Calm Technology</em>. O&#x27;Reilly Media.</li>
+    <li>Wroblewski, L. (2008). <em>Web Form Design</em>. Rosenfeld Media.</li>
+    <li>Nah, F. (2004). &quot;A Study on Tolerable Waiting Time: How Long Are Web Users Willing to Wait?&quot; <em>Behaviour &amp; Information Technology</em>.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trust calibration in AI features — ALIVE Library</title>
+<meta name="description" content="Trust calibration in AI features is the practice of designing so users develop an accurate mental model of when and how much to trust the system — avoiding both dangerous over-trust and unproductive under-trust.">
+<link rel="canonical" href="https://library.alivedesignstudio.net/entries/trust-calibration-in-ai-features.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Trust calibration in AI features — ALIVE Library">
+<meta property="og:description" content="Trust calibration in AI features is the practice of designing so users develop an accurate mental model of when and how much to trust the system — avoiding both dangerous over-trust and unproductive under-trust.">
+<meta property="og:image" content="https://res.cloudinary.com/dnnfhyeuv/image/upload/v1781278707/grok-image-d3dfdec1-6189-432b-8368-d5d50886923c_cfdpwb.jpg">
+<meta property="og:url" content="https://library.alivedesignstudio.net/entries/trust-calibration-in-ai-features.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="site-head">
+  <a class="wordmark" href="../index.html">ALIVE <span>LIBRARY</span></a>
+  <nav class="theme-nav"><a href="../index.html">All</a><span class="dot" aria-hidden="true">·</span><a href="../themes/mind.html">Mind</a><span class="dot" aria-hidden="true">·</span><a href="../themes/calm.html">Calm Tech</a><span class="dot" aria-hidden="true">·</span><a href="../themes/ai.html" class="active">AI</a><span class="dot" aria-hidden="true">·</span><a href="../themes/patterns.html">Patterns</a><span class="dot" aria-hidden="true">·</span><a href="../themes/tools.html">Tools</a></nav>
+</header>
+<main id="main" class="entry">
+<article>
+<header class="entry-head">
+  <span class="tag">AI &AMP; HUMAN INTERFACES</span>
+  <h1 class="entry-title">Trust calibration in AI features</h1>
+  <p class="updated muted">Last updated: June 2026</p>
+</header>
+<p class="definition">Trust calibration in AI features is the practice of designing so users develop an accurate mental model of when and how much to trust the system — avoiding both dangerous over-trust and unproductive under-trust.</p>
+<!-- Visual suggestion (author note):
+A hand-drawn trust calibration curve: a diagonal line representing ideal “trust matches reliability,” with zones above the line for dangerous over-trust and below for under-trust. Show interface signals (confidence bars, source highlights, edit controls) pulling the user back toward the ideal line. Side-by-side: polished but misleading response versus one with clear calibration cues. Margin sketch of a user adjusting a “trust dial” next to AI output.
+-->
+<div class="numbered">
+  <section class="step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <h2>The Principle</h2>
+      <p>Humans are prone to two opposing failures with AI: over-trust (often called automation bias, as identified by Parasuraman and Riley) and under-trust (dismissing valuable suggestions after seeing errors). Neither is rational. Effective calibration helps users match their trust level to the AI’s actual reliability in a given context.</p>
+<p>This requires explicit signals about uncertainty, demonstrated competence over time, and clear boundaries of capability. Over-trust often stems from polished presentation and lack of visible limitations. Under-trust usually follows negative experiences without recovery paths or explanations. Good design actively manages this balance through transparency, consistent behavior, and opportunities for users to verify and recover.</p>
+<p>In my own projects, I have seen both extremes. Early AI features I shipped were presented too confidently, leading users to copy incorrect suggestions into production code. After a few high-profile mistakes, the same users began ignoring even strong recommendations. Learning to design for calibration — showing confidence ranges, highlighting weak sections, and making verification trivial — helped users settle into a more accurate, productive trust level. The interface stopped being an all-or-nothing gamble.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <h2>Why It Matters for Design &amp; Building</h2>
+      <p>Poor trust calibration wastes the potential of AI and creates real risk. Over-trust leads to errors, misinformation, and safety issues. Under-trust means users miss genuine value and abandon useful tools. Neither outcome serves people or the product.</p>
+<p>As a Design Engineer, trust calibration has become one of my primary evaluation criteria for any AI surface. In one research summarization tool, we added layered signals: overall confidence, per-section highlighting, and easy source verification. Users moved from either blindly accepting summaries or rejecting them outright to selectively using the strong parts and correcting the weak ones. The tool became far more effective.</p>
+<p>For calm technology and responsible AI, calibrated trust is essential. When users feel in control and appropriately confident, they experience less stress and cognitive load. Interfaces that swing between over-promising and under-delivering keep users on edge. Honest calibration supports flow and long-term adoption by making the AI a reliable partner rather than a source of anxiety or disappointment.</p>
+    </div>
+  </section>
+  <section class="step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <h2>Real-World Examples</h2>
+      <p>Perplexity.ai manages calibration reasonably well by grounding answers in sources and allowing easy verification. Users learn when to trust the synthesis and when to dig deeper, creating a balanced relationship.</p>
+<p>Many general chat interfaces still struggle. Polished, uniformly confident responses encourage over-trust until a hallucination appears, after which users swing to chronic skepticism and reduced usage.</p>
+<p>A code completion tool I worked on offered a mixed case. Initial versions had high over-trust because suggestions looked authoritative. After introducing inline confidence indicators, alternative suggestions, and easy dismissal, developers calibrated better — accepting strong suggestions quickly while reviewing weaker ones. Error rates dropped and overall satisfaction increased.</p>
+    </div>
+  </section>
+</div>
+<section class="related">
+  <h2>Related entries</h2>
+  <ul>
+    <li><a href="../entries/designing-for-ai-uncertainty.html">Designing for AI uncertainty</a></li>
+    <li><a href="../entries/the-transparency-stack-in-ai-products.html">The transparency stack in AI products</a></li>
+    <li><a href="../entries/ai-confidence-indicators-done-honestly.html">AI confidence indicators done honestly</a></li>
+    <li><a href="../entries/designing-the-ai-failure-state.html">Designing the AI failure state</a></li>
+    <li><a href="../entries/informed-consent-in-product-design.html">Informed consent in product design</a></li>
+  </ul>
+</section>
+<section class="references">
+  <h2>References</h2>
+  <ol class="refs">
+    <li>Jacovi, A., et al. (2021). &quot;Formalizing Trust in Artificial Intelligence.&quot; ACM FAccT.</li>
+    <li>Amershi, S., et al. (2019). &quot;Guidelines for Human-AI Interaction.&quot; CHI Conference.</li>
+    <li>Budiu, R. (2023). &quot;Explainable AI in Chat Interfaces.&quot; Nielsen Norman Group. <a href="https://www.nngroup.com/articles/explainable-ai/" class="ref-link" target="_blank" rel="noopener">nngroup.com</a></li>
+    <li>Weidinger, L., et al. (2022). &quot;Taxonomy of Risks posed by Language Models.&quot; ACM FAccT.</li>
+    <li>Parasuraman, R., &amp; Riley, V. (1997). &quot;Humans and Automation: Use, Misuse, Disuse, Abuse.&quot; <em>Human Factors</em>.</li>
+  </ol>
+</section>
+</article>
+<section class="subscribe" aria-label="Subscribe for new entries">
+  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
+  <!-- Buttondown embed: replace YOURUSERNAME with your real username -->
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/YOURUSERNAME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/YOURUSERNAME', 'popupwindow')">
+    <label class="visually-hidden" for="bd-email">Email address</label>
+    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <p>By <a href="https://alivedesignstudio.net" target="_blank" rel="noopener">Lívia Kiss · ALIVE Design Studio</a></p>
+  <p class="muted">A living reference, revised over time.</p>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>
