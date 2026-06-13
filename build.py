@@ -26,9 +26,8 @@ import markdown as md
 # Configuration
 # --------------------------------------------------------------------------
 
-BASE_URL = "https://library.alivedesignstudio.net"   # change before deploy if needed
+BASE_URL = "https://alivedesignlibrary.com"          # production domain
 STUDIO_URL = "https://alivedesignstudio.net"
-BUTTONDOWN_USER = "YOURUSERNAME"                       # <-- replace with real Buttondown username
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONTENT_DIR = os.path.join(HERE, "content")
@@ -251,15 +250,8 @@ def footer(prefix):
 
 
 def email_form():
-    return f"""<section class="subscribe" aria-label="Subscribe for new entries">
-  <p class="subscribe-lead">Get notified when a new entry is added.<br><span class="muted">No newsletters. Just a quiet ping.</span></p>
-  <!-- Buttondown embed: replace {BUTTONDOWN_USER} with your real username -->
-  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/{BUTTONDOWN_USER}" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/{BUTTONDOWN_USER}', 'popupwindow')">
-    <label class="visually-hidden" for="bd-email">Email address</label>
-    <input id="bd-email" type="email" name="email" placeholder="you@example.com" required>
-    <button type="submit">Subscribe →</button>
-  </form>
-  <p class="subscribe-fine muted">By subscribing you agree to receive occasional emails when new entries are published. Unsubscribe any time.</p>
+    return """<section class="follow" aria-label="Follow for new entries">
+  <p class="follow-lead">New entries are published every 2–3 weeks.<br><span class="muted">Follow along on <a href="https://x.com/LiviaKissDesign" target="_blank" rel="noopener">X</a> or <a href="https://www.linkedin.com/in/l%C3%ADvia-kiss-991401391/" target="_blank" rel="noopener">LinkedIn</a> to get notified.</span></p>
 </section>
 """
 
@@ -532,6 +524,11 @@ def main():
         f.write(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n")
     with open(os.path.join(SITE_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(build_sitemap(all_entries))
+
+    # CNAME — GitHub Pages custom domain (re-emitted each build so it isn't lost)
+    domain = BASE_URL.split("://", 1)[-1].rstrip("/")
+    with open(os.path.join(SITE_DIR, "CNAME"), "w", encoding="utf-8") as f:
+        f.write(domain + "\n")
 
     print(f"Built {len(all_entries)} entries across {len(theme_entries)} themes.")
     for k in THEME_ORDER:
